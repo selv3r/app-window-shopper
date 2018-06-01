@@ -9,6 +9,12 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Avenir.ttc">
+            <string>Avenir-Book</string>
+            <string>Avenir-Light</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--MainVC-->
         <scene sceneID="tne-QT-ifu">
@@ -43,16 +49,49 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VPW-oI-QiF">
+                                <rect key="frame" x="20" y="300" width="335" height="68.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZYU-yS-9ag">
+                                <rect key="frame" x="161" y="373.5" width="53" height="27.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jew-vR-jfM">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="v5Z-eH-1Wg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="18"/>
+                                <state key="normal" title="Clear Calculator">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="clearCalculatorPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AQ1-Vd-mj0"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="ZYU-yS-9ag" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="69q-R5-GM3"/>
                             <constraint firstItem="n93-Lu-OPO" firstAttribute="trailing" secondItem="gXz-kk-1Nw" secondAttribute="trailing" id="92V-UW-ZRa"/>
                             <constraint firstItem="n93-Lu-OPO" firstAttribute="top" secondItem="gXz-kk-1Nw" secondAttribute="bottom" constant="25" id="9hs-Cv-aIX"/>
                             <constraint firstItem="scv-Td-JYP" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="35" id="ASL-sn-dla"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Slu-2M-6BL" secondAttribute="bottom" id="GaI-ks-Fny"/>
                             <constraint firstItem="scv-Td-JYP" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JO5-a5-Dbm"/>
+                            <constraint firstItem="VPW-oI-QiF" firstAttribute="top" secondItem="n93-Lu-OPO" secondAttribute="bottom" constant="45" id="U4N-u1-v2v"/>
+                            <constraint firstItem="jew-vR-jfM" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aty-AH-EkM"/>
+                            <constraint firstItem="VPW-oI-QiF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bET-dU-Jpx"/>
+                            <constraint firstItem="VPW-oI-QiF" firstAttribute="width" secondItem="n93-Lu-OPO" secondAttribute="width" id="esE-za-kFM"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jew-vR-jfM" secondAttribute="trailing" constant="20" id="fRb-r5-Vjp"/>
                             <constraint firstItem="Slu-2M-6BL" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-20" id="h1R-uw-UpV"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="gXz-kk-1Nw" secondAttribute="trailing" constant="20" id="j7D-Ej-gce"/>
+                            <constraint firstItem="ZYU-yS-9ag" firstAttribute="top" secondItem="VPW-oI-QiF" secondAttribute="bottom" constant="5" id="nSs-zn-U2A"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="jew-vR-jfM" secondAttribute="bottom" constant="20" id="o9A-k0-qWc"/>
                             <constraint firstItem="n93-Lu-OPO" firstAttribute="leading" secondItem="gXz-kk-1Nw" secondAttribute="leading" id="soh-H2-Svj"/>
                             <constraint firstItem="gXz-kk-1Nw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="tm8-fG-5uu"/>
                             <constraint firstItem="gXz-kk-1Nw" firstAttribute="top" secondItem="scv-Td-JYP" secondAttribute="bottom" constant="35" id="tzo-CK-dKB"/>
@@ -63,7 +102,9 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="ZYU-yS-9ag" id="oiu-9h-Qau"/>
                         <outlet property="priceTxt" destination="n93-Lu-OPO" id="EJs-Xt-0CX"/>
+                        <outlet property="resultLbl" destination="VPW-oI-QiF" id="l8W-fq-0pn"/>
                         <outlet property="wageTxt" destination="gXz-kk-1Nw" id="axG-sv-Pek"/>
                     </connections>
                 </viewController>
